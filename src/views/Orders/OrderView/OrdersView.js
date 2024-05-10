@@ -1,8 +1,8 @@
 import React, { useMemo, useContext } from "react";
-import { OrderDataContext } from "../../../App.js";
+import { OrderDataContext } from "../../../App";
+import Header from "../../../components/Header/Header";
+import OrderCard from "../../../components/OrderCard/OrderCard";
 import "./styles.css";
-import Header from "../../../components/Header/Header.js";
-import OrderCard from "../../../components/orderCard/OrderCard.js";
 
 const OrderView = () => {
   const { deliveries } = useContext(OrderDataContext);
