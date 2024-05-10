@@ -1,0 +1,13 @@
+.order-items {
+  list-style: disc;
+}
+
+.icon-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  color: "green";
+}
+.icon-container {
+  color: green;
+}

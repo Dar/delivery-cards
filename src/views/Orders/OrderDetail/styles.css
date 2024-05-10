@@ -1,0 +1,16 @@
+.order-info > div {
+  margin: 10px 0;
+}
+
+h3 {
+  margin: 0.25rem 0;
+}
+
+.order-detail-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-list {
+  list-style: none;
+}

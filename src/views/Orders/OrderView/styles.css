@@ -1,0 +1,13 @@
+.order-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.order-list-container {
+  width: 80%;
+}
+
+.order-list {
+  display: flex;
+  flex-wrap: wrap;
+}
