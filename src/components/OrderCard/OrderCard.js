@@ -29,8 +29,19 @@ const OrderCard = React.memo(({ deliveryItem }) => {
       <CardContent></CardContent>
       <CardContent>
         <Typography gutterBottom variant="p" component="div">
-          Pickup: <br />
-          <strong>{deliveryItem.client}</strong>
+          Pickup: <strong>{deliveryItem.restaurant}</strong>
+        </Typography>
+        <Typography gutterBottom variant="p" component="div">
+          <Link
+            to="#"
+            onClick={() => handleGoogleMapsLink(deliveryItem.deliveryAddress)}
+          >
+            {deliveryItem.deliveryAddress}
+          </Link>
+        </Typography>
+        <br />
+        <Typography gutterBottom variant="p" component="div">
+          Deliver to: <strong>{deliveryItem.client}</strong>
         </Typography>
         <Typography gutterBottom variant="p" component="div">
           <Link
@@ -41,18 +52,6 @@ const OrderCard = React.memo(({ deliveryItem }) => {
           </Link>
         </Typography>
         <br />
-        <Typography gutterBottom variant="p" component="div">
-          Deliver to: <br />
-          <strong>{deliveryItem.restaurant}</strong>
-        </Typography>
-        <Typography gutterBottom variant="p" component="div">
-          <Link
-            to="#"
-            onClick={() => handleGoogleMapsLink(deliveryItem.deliveryAddress)}
-          >
-            {deliveryItem.deliveryAddress}
-          </Link>
-        </Typography>
       </CardContent>
 
       <CardContent xs={{ marginBottom: 10 }}>
