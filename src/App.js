@@ -22,8 +22,9 @@ export const OrderDataContext = createContext();
 function App() {
   const [deliveries, setDeliveries] = useState([]);
   const [viewingDay, setViewingDay] = useState(moment().format("YYYY-MM-DD"));
-  const sortDeliveriesByTime = (deliveries, property) => {
-    return deliveries.sort((a, b) => {
+
+  const sortDeliveriesByTime = (deliveryItems, property) => {
+    return deliveryItems.sort((a, b) => {
       return a[property].localeCompare(b[property]);
     });
   };
@@ -63,13 +64,13 @@ function App() {
 
   useEffect(() => {
     let deliveriesFromStorage = localStorage.getItem(viewingDay);
-    let deliveries;
+    let deliveryItems;
     if (deliveriesFromStorage) {
-      deliveries = JSON.parse(deliveriesFromStorage);
+      deliveryItems = JSON.parse(deliveriesFromStorage);
     } else {
-      deliveries = fetchDeliveries(viewingDay);
+      deliveryItems = fetchDeliveries(viewingDay);
     }
-    const sortedDeliveries = sortDeliveriesByTime(deliveries, "deliverAt");
+    const sortedDeliveries = sortDeliveriesByTime(deliveryItems, "deliverAt");
     setDeliveries(sortedDeliveries);
   }, [viewingDay]);
 

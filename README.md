@@ -1,4 +1,4 @@
-# Foodee Delivery App Assignment
+# Delivery Cards
 
 You're an up and coming delivery logistics company and you are tasked with creating an app for your drivers so that your company can track their progress throughout the delivery.
 
@@ -29,14 +29,6 @@ Create a "proof of concept" app using React for how the delivery app should func
 
 - Allow the driver to see future days, so they can confirm that they will take deliveries. Do not let the driver move the deliveries past `driver_confirmed` state.
 - Allow the driver to punch out to google / apple maps by touching the address.
-
-### Considerations
-
-- Don't focus too much on making this look great, it's a POC we want to see it function as quickly as possible
-- Consider using a router, such as [React Router](https://reactrouter.com/) to help facilitate drilling into each of the cards
-- Make sure that the list of deliveries is sorted in a way that makes sense for the driver, either by pickup time or delivery time. It may make sense to switch how each delivery gets sorted after the order gets picked up, or perhaps by grouping orders that need pickup / delivery together.
-- Consider assigning a color to the card depending on whether it's been picked up or not, the drivers might have a lot of deliveries in a short amount of time, and this can help them differentiate pickups from dropoffs.
-- The text in the call to action / button should be driven off the state of the order, come up with good names for each of the states that indicate what the driver needs to do to get to the next state. (e.g `scheduled`: "Confirm", `driver_confirmed`: "Arrived at Restaurant"... etc)
 
 ## States
 
